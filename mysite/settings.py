@@ -95,6 +95,7 @@ DATABASES = {
     }
 }
 
+
 DEFAULT_FILE_STORAGE = 'mysite.azure_storage.AzureMediaStorage'
 STATICFILES_STORAGE = 'mysite.azure_storage.AzureStaticStorage'
 
