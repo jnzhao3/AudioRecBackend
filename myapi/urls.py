@@ -11,5 +11,5 @@ from . import views
 urlpatterns = [
     path('recordings/', views.RecordingAPIView.as_view()),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('',include('rest_framework.urls', namespace='rest_framework'))
+    path('/',view.BaseAPIView.as_view())
 ]

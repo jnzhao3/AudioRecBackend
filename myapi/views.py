@@ -2,6 +2,11 @@ from rest_framework import viewsets, decorators, response, views, status
 from .forms import UploadFileForm
 from .storage import uploadFile
 
+class BaseAPIView(views.APIView):
+
+    def get(self, request, pk=None):
+        return response.Response("Audio Recorder", status=status.HTTP_200_OK)
+
 class RecordingAPIView(views.APIView):
     
     # @decorators.action(methods=['get'], detail=True)
