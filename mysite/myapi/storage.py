@@ -3,7 +3,6 @@ from azure.storage.blob import BlobServiceClient
 import os
 import uuid
 
-
 def uploadFile(f):
     try:
         account_url = "https://mobileaudiorecordings.blob.core.windows.net"
