@@ -10,5 +10,6 @@ from . import views
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('recordings/', views.RecordingAPIView.as_view()),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('/',views.BaseAPIView.as_view())
 ]
