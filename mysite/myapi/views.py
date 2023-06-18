@@ -1,6 +1,6 @@
 from rest_framework import viewsets, decorators, response, views, status
 from .forms import UploadFileForm
-
+from .storage import uploadFile
 
 class RecordingAPIView(views.APIView):
     
@@ -23,6 +23,7 @@ class RecordingAPIView(views.APIView):
             form = UploadFileForm(request.POST, request.FILES)
             if form.is_valid():
                 file = request.FILES["file"]
+                uploadFile(file)
                 return response.Response("File Uploaded Successfully", status=status.HTTP_200_OK)
         else:
             form = UploadFileForm()
